@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-brand-navy: #0b1726;
+  --color-brand-petroleum: #173b4d;
+  --color-brand-champagne: #b89b5e;
+  --color-brand-champagne-dark: #9a7e44;
+  --color-brand-offwhite: #f7f5f0;
+  --color-brand-text: #17202a;
+  --color-brand-muted: #5f6872;
+  --color-brand-line: rgba(23, 59, 77, 0.12);
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+@layer base {
+  ::selection {
+    background-color: var(--color-brand-petroleum);
+    color: var(--color-brand-offwhite);
+  }
+}
+
+@layer utilities {
+  .focus-ring {
+    @apply focus-visible:outline-2 focus-visible:outline-brand-champagne focus-visible:outline-offset-2;
+  }
+}
